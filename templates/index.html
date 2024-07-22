@@ -78,12 +78,14 @@
     <div class="friends-list" id="friendsList">
         {% if friends %}
             {% for friend in friends %}
+               <form>
                 <div class="friend">
                     <img src="{{ friend.image_url }}" alt="{{ friend.name }}">
                     <p>{{ friend.name }}</p>
                     <p>Month : {{ friend.birth_month_name }}</p>
                     <p>Date of Birth: {{ friend.DOB }}</p>
                 </div>
+                </form>
             {% endfor %}
         {% else %}
             <p>No friends found for this category.</p>
